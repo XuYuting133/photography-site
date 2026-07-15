@@ -1,0 +1,16 @@
+node_modules/
+dist/
+scripts/generated-works.json
+.env
+.env.local
+*.log
+
+# 临时文件
+.claude/
+deepseek.txt
+oss.txt
+
+# 个人数据文件（不上传）
+src/data/content/
+public/config.json
+src/data/works.js

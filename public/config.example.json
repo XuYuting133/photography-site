@@ -1,0 +1,29 @@
+{
+  "works": [
+    {
+      "id": 1,
+      "title": "作品标题",
+      "date": "2024-01",
+      "location": "拍摄地点",
+      "description": "简短描述",
+      "featured": true,
+      "imageUrl": "https://你的域名.com/photos/example.jpg",
+      "thumbnailUrl": "https://你的域名.com/photos/example.jpg?x-oss-process=image/resize,w_600"
+    }
+  ],
+  "siteConfig": {
+    "name": "你的名字",
+    "nameEn": "YOUR NAME",
+    "tagline": "一句话介绍",
+    "bio": "关于你自己的介绍……",
+    "avatarUrl": "https://你的域名.com/photos/avatar.jpg",
+    "experiences": [],
+    "instagram": "",
+    "email": "hello@example.com",
+    "xiaohongshu": "",
+    "formEmbedUrl": "",
+    "formspreeEndpoint": "https://formspree.io/f/xxxxx",
+    "siteTitle": "个人摄影作品集",
+    "copyright": "© 2026 Your Name. All Rights Reserved."
+  }
+}
