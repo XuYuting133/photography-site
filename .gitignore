@@ -9,6 +9,7 @@ scripts/generated-works.json
 .claude/
 deepseek.txt
 oss.txt
+ref/
 
 # 个人数据文件（不上传）
 src/data/content/
