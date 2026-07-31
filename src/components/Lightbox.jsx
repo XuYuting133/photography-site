@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from 'react';
 
 export default function Lightbox({ work, works, onClose, onNavigate }) {
-  const currentIndex = works.findIndex((w) => w.id === work.id);
+  const currentIndex = works.findIndex((w) => w.imageUrl === work.imageUrl);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < works.length - 1;
 
