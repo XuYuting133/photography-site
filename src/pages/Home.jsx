@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { useSiteConfig } from '../data/SiteContext';
 import Gallery from '../components/Gallery';
 
+import ProjectCard from '../components/ProjectCard';
+
 export default function Home() {
-  const { works, siteConfig } = useSiteConfig();
+  const { works, projects, siteConfig } = useSiteConfig();
   const featuredWorks = works.filter((w) => w.featured);
 
   return (
@@ -56,6 +58,26 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* 项目列表 */}
+      {projects && projects.length > 0 && (
+        <section className="max-w-6xl mx-auto px-6 pb-24 md:pb-32">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 font-semibold">系列项目</h2>
+            <p className="mt-3 text-sm text-gray-400 tracking-wide">Projects</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {projects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link to="/projects" className="inline-block text-sm text-gray-400 hover:text-accent tracking-widest uppercase transition-colors">
+              查看全部项目 →
+            </Link>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

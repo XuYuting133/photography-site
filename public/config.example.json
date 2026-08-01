@@ -1,14 +1,30 @@
 {
   "works": [
     {
-      "id": 1,
       "title": "作品标题",
       "date": "2024-01",
       "location": "拍摄地点",
       "description": "简短描述",
       "featured": true,
-      "imageUrl": "https://你的域名.com/photos/example.jpg",
-      "thumbnailUrl": "https://你的域名.com/photos/example.jpg?x-oss-process=image/resize,w_600"
+      "imageUrl": "https://你的域名.com/photos/originals/example.jpg",
+      "thumbnailUrl": "https://你的域名.com/photos/thumbnails/example.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "name": "项目名称",
+      "description": "项目描述，介绍这个系列的背景和故事。",
+      "works": [
+        {
+          "title": "项目中的作品",
+          "date": "2024-01",
+          "location": "拍摄地点",
+          "description": "简短描述",
+          "featured": false,
+          "imageUrl": "https://你的域名.com/photos/originals/project-photo.jpg",
+          "thumbnailUrl": "https://你的域名.com/photos/thumbnails/project-photo.jpg"
+        }
+      ]
     }
   ],
   "siteConfig": {
@@ -16,7 +32,7 @@
     "nameEn": "YOUR NAME",
     "tagline": "一句话介绍",
     "bio": "关于你自己的介绍……",
-    "avatarUrl": "https://你的域名.com/photos/avatar.jpg",
+    "avatarUrl": "https://你的域名.com/photos/thumbnails/avatar.jpg",
     "experiences": [],
     "instagram": "",
     "email": "hello@example.com",

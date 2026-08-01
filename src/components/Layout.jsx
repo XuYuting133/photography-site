@@ -22,6 +22,7 @@ export default function Layout() {
   const navLinks = [
     { to: '/', label: '首页' },
     { to: '/works', label: '作品' },
+    { to: '/projects', label: '项目' },
     { to: '/about', label: '关于' },
     { to: '/contact', label: '联系' },
   ];
