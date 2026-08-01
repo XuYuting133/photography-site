@@ -29,23 +29,21 @@ export default function ProjectDetail() {
     <div className="page-enter h-screen overflow-hidden relative bg-white">
       {/* 固定顶栏 */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link
-            to="/projects"
-            className="text-xs text-gray-400 hover:text-accent tracking-wide uppercase transition-colors"
-          >
-            ← 项目列表
-          </Link>
-          <div className="text-right">
-            <h1 className="text-sm font-serif text-gray-900 font-semibold">
-              {project.name}
-            </h1>
-            {project.description && (
-              <p className="text-xs text-gray-400 mt-0.5 hidden md:block">
-                {project.description}
-              </p>
-            )}
-          </div>
+        <Link
+          to="/projects"
+          className="absolute top-4 left-6 text-xs text-gray-400 hover:text-accent tracking-wide uppercase transition-colors"
+        >
+          ← 项目列表
+        </Link>
+        <div className="max-w-2xl mx-auto px-6 pt-5 pb-3 text-center">
+          <h1 className="font-serif text-xl md:text-2xl text-gray-900 font-semibold">
+            {project.name}
+          </h1>
+          {project.description && (
+            <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+              {project.description}
+            </p>
+          )}
         </div>
       </div>
 
@@ -62,7 +60,7 @@ export default function ProjectDetail() {
           >
             {/* 图片 */}
             <div
-              className="flex-1 flex items-center justify-center w-full max-w-5xl cursor-pointer group pt-14"
+              className="flex-1 flex items-center justify-center w-full max-w-5xl cursor-pointer group pt-24"
               onClick={() => setSelectedWork(work)}
             >
               <img
