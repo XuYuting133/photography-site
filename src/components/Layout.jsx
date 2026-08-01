@@ -17,6 +17,7 @@ export default function Layout() {
 
   useEffect(() => {
     setMenuOpen(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const navLinks = [
