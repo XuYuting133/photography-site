@@ -28,7 +28,7 @@ export default function ProjectDetail() {
   return (
     <div className="page-enter h-screen overflow-hidden relative bg-white">
       {/* 固定顶栏 */}
-      <div className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-sm">
+      <div className="fixed top-16 left-0 right-0 z-40 bg-white/90 backdrop-blur-sm">
         <Link
           to="/projects"
           className="absolute top-4 left-6 text-xs text-gray-400 hover:text-accent tracking-wide uppercase transition-colors"
