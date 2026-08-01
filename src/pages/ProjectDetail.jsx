@@ -8,7 +8,7 @@ export default function ProjectDetail() {
   const { projects } = useSiteConfig();
 
   const project = projects?.find(
-    (p) => encodeURIComponent(p.name) === projectName
+    (p) => p.name === projectName
   );
 
   const [selectedWork, setSelectedWork] = useState(null);
