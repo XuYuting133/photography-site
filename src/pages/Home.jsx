@@ -66,9 +66,11 @@ export default function Home() {
             <h2 className="font-serif text-2xl md:text-3xl text-gray-900 font-semibold">系列项目</h2>
             <p className="mt-3 text-sm text-gray-400 tracking-wide">Projects</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-10">
             {projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
+              <div key={project.name} className="w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.75rem)] max-w-sm">
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
           <div className="mt-12 text-center">

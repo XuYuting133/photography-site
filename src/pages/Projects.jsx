@@ -17,9 +17,11 @@ export default function Projects() {
         </div>
 
         {projects && projects.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-10">
             {projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
+              <div key={project.name} className="w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.75rem)] max-w-sm">
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
         ) : (

@@ -67,3 +67,20 @@ body {
   border-color: #B8956A;
   box-shadow: 0 0 0 3px rgba(184, 149, 106, 0.1);
 }
+
+/* ===== 项目详情页滚动吸附 ===== */
+html.snap-page {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* ===== 动态视口高度（iOS Safari 适配） ===== */
+.snap-section {
+  height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  .snap-section {
+    height: 100dvh;
+  }
+}
