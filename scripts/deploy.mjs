@@ -58,7 +58,7 @@ async function uploadDir(localDir, ossPrefix) {
 // ============ 设置 Bucket 为静态网站托管 ============
 async function enableStaticWebsite() {
   try {
-    await client.putBucketWebsite('xleidoscope-photography', {
+    await client.putBucketWebsite('xphotography', {
       index: 'index.html',
       error: 'index.html', // SPA fallback: 404 也返回 index.html
     });
