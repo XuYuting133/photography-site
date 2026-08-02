@@ -1,12 +1,18 @@
+import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useSiteConfig } from '../data/SiteContext';
 import Gallery from '../components/Gallery';
-
+import Lightbox from '../components/Lightbox';
 import ProjectCard from '../components/ProjectCard';
 
 export default function Home() {
   const { works, projects, siteConfig } = useSiteConfig();
   const featuredWorks = works.filter((w) => w.featured);
+  const [selectedWork, setSelectedWork] = useState(null);
+
+  const openLightbox = (work) => setSelectedWork(work);
+  const closeLightbox = useCallback(() => setSelectedWork(null), []);
+  const navigateTo = useCallback((work) => setSelectedWork(work), []);
 
   return (
     <div className="page-enter">
@@ -51,7 +57,7 @@ export default function Home() {
           <h2 className="font-serif text-2xl md:text-3xl text-gray-900 font-semibold">精选作品</h2>
           <p className="mt-3 text-sm text-gray-400 tracking-wide">Selected Works</p>
         </div>
-        <Gallery works={featuredWorks} />
+        <Gallery works={featuredWorks} onImageClick={openLightbox} />
         <div className="mt-12 text-center">
           <Link to="/works" className="inline-block text-sm text-gray-400 hover:text-accent tracking-widest uppercase transition-colors">
             查看全部作品 →
@@ -79,6 +85,10 @@ export default function Home() {
             </Link>
           </div>
         </section>
+      )}
+
+      {selectedWork && (
+        <Lightbox work={selectedWork} works={featuredWorks} onClose={closeLightbox} onNavigate={navigateTo} />
       )}
     </div>
   );
